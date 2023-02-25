@@ -3,6 +3,7 @@ package SeleniumChrome;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FirefoxWebdriver {
     public static void main(String[] args) throws InterruptedException {
@@ -10,6 +11,8 @@ public class FirefoxWebdriver {
         WebDriver driver =new FirefoxDriver();
         driver.get("https://demo.opencart.com/");
         // the tile page
+
+
         System.out.println(" 1. Title page : "+ driver.getTitle());
         // different way we can try is
         String PageTitle = driver.getTitle();
@@ -28,5 +31,6 @@ public class FirefoxWebdriver {
         driver.manage().window().minimize();
         driver.manage().wait(30000);
         driver.navigate().back();
+
         }
     }
